@@ -1,6 +1,8 @@
 # 🙊 react-file-showable-chat-ui
 ## The revised edition of original react-file-showable-chat-ui.
 
+<img src="https://user-images.githubusercontent.com/6558862/73522961-21e44500-444d-11ea-984f-471e9055f064.png" width="50%">
+
 A library of React components for building chat UI's.
 
 [![NPM](https://nodei.co/npm/react-file-showable-chat-ui.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-file-showable-chat-ui/)
