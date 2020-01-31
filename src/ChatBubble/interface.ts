@@ -1,10 +1,15 @@
-import Message from '../Message';
-export default interface ChatBubbleProps {
+import Message from '../Message'
+export default interface ChatBubbleProps extends ChatBubbleAndGroupSharedProps {
   message: Message
-  bubbleStyles: {
-    userBubble: object
-    chatbubble: object
-    text: object
-  }
-  bubblesCentered: boolean
+}
+
+export interface ChatBubbleAndGroupSharedProps {
+  bubbleStyles: BubbleStyles
+  bubblesCentered?: boolean
+}
+
+export interface BubbleStyles {
+  userBubble: React.CSSProperties
+  chatbubble: React.CSSProperties
+  text: React.CSSProperties
 }

@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
+import * as React from 'react'
 
 const styles = {
   chatInput: {
-    flex: 1,
+    flex: 1
   },
   inputStyle: {
     border: 'none',
@@ -12,22 +12,26 @@ const styles = {
     fontSize: '16',
     outline: 'none',
     padding: '30',
-    width: '100%',
-  },
-};
-
-interface ChatInputProps {
-  inputStyles: object;
-  inputPlaceholder: string;
+    width: '100%'
+  }
 }
 
-const ChatInput = (props: ChatInputProps) => {
-  const { inputStyles, inputPlaceholder } = props;
+interface ChatInputProps {
+  inputStyles?: object
+  inputPlaceholder?: string
+}
+
+const ChatInput: React.FC<ChatInputProps> = props => {
+  const { inputStyles, inputPlaceholder } = props
   return (
     <div className="chat-input" style={styles.chatInput}>
-      <input type="text" style={inputStyles || styles.inputStyle} placeholder={inputPlaceholder} />
+      <input
+        type="text"
+        style={inputStyles || styles.inputStyle}
+        placeholder={inputPlaceholder}
+      />
     </div>
-  );
-};
+  )
+}
 
-export default ChatInput;
+export default ChatInput

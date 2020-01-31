@@ -3,14 +3,14 @@ export default {
     display: 'flex',
     flexDirection: 'column',
     flex: 1,
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   chatHistory: { overflow: 'auto' },
   chatbubbleWrapper: {
     marginTop: 10,
     marginBottom: 10,
     overflow: 'auto',
-    position: 'relative',
+    position: 'relative'
   },
   img: {
     borderRadius: 100,
@@ -18,6 +18,6 @@ export default {
     left: 0,
     position: 'absolute',
     width: 36,
-    zIndex: 100,
-  },
-};
+    zIndex: 100
+  }
+} as { [key: string]: React.CSSProperties }

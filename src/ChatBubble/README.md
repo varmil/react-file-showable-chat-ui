@@ -4,14 +4,14 @@ The `ChatBubble` component basically just turns a given string into chat bubble.
 
 #### Props
 
-**message**: This must be a valid [Message](../Message) object.
-**bubbleStyles** (optional): styles to apply to the chat bubbles _(will probably change. I will update this page with a proposal)_
+* **message**: This must be a valid [Message](../Message) object.
+* **bubbleStyles** (optional): styles to apply to the chat bubbles _(will probably change. I will update this page with a proposal)_
 
 ```javascript
 bubbleStyles={{
-  userBubble: object
-  chatbubble: object
-  text: object
+  userBubble: React.CSSProperties
+  chatbubble: React.CSSProperties
+  text: React.CSSProperties
 }}
 ```
 
