@@ -1,6 +1,6 @@
 ## Message
 
-The `Message` object is the standard class for handling message data in `react-chat-ui`.
+The `Message` object is the standard class for handling message data in `react-file-showable-chat-ui`.
 
 #### Constructor
 
@@ -9,7 +9,7 @@ The `Message` object is the standard class for handling message data in `react-c
 * **senderName** (optional): the sender name is an optional parameter that associates a name to a message _(can be thought of as a string representation of an `id`, although your id's will be unique, users may have the same name)_
 
 ```javascript
-const myMessage = new Message(1, 'Hello World!', 'Elon Musk');
+const myMessage = new Message({ id: 1, message: 'Hello World!', senderName: 'Elon Musk' })
 
-const anotherMessage = new Message(0, 'Hey Elon!');
+const anotherMessage = new Message({ id: 0, message: 'Hey Elon!' })
 ```

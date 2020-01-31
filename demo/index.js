@@ -46,7 +46,7 @@ class Chat extends React.Component {
         new Message({ id: 'Mark', message: 'Hey guys!', senderName: 'Mark' }),
         new Message({
           id: 2,
-          message: 'Hey! Evan here. react-chat-ui is pretty dooope.',
+          message: 'Hey! Evan here. react-file-showable-chat-ui is pretty dooope.',
           senderName: 'Evan',
         }),
       ],
@@ -84,17 +84,17 @@ class Chat extends React.Component {
   render() {
     return (
       <div className="container">
-        <h1 className="text-center">react-chat-ui</h1>
+        <h1 className="text-center">react-file-showable-chat-ui</h1>
         <p className="text-center">
           <a
-            href="https://github.com/brandonmowat/react-chat-ui"
+            href="https://github.com/brandonmowat/react-file-showable-chat-ui"
             target="_blank"
           >
             Github
           </a>
         </p>
         <div className="install">
-          <code>npm i -S react-chat-ui</code>
+          <code>npm i -S react-file-showable-chat-ui</code>
         </div>
         <div className="chatfeed-wrapper">
           <ChatFeed

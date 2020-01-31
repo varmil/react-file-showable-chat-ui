@@ -72,7 +72,7 @@ var Chat = function (_React$Component) {
     _this.state = {
       messages: [new _lib.Message({ id: 'Mark', message: 'Hey guys!', senderName: 'Mark' }), new _lib.Message({
         id: 2,
-        message: 'Hey! Evan here. react-chat-ui is pretty dooope.',
+        message: 'Hey! Evan here. react-file-showable-chat-ui is pretty dooope.',
         senderName: 'Evan'
       })],
       useCustomBubble: false,
@@ -121,7 +121,7 @@ var Chat = function (_React$Component) {
         _react2.default.createElement(
           'h1',
           { className: 'text-center' },
-          'react-chat-ui'
+          'react-file-showable-chat-ui'
         ),
         _react2.default.createElement(
           'p',
@@ -129,7 +129,7 @@ var Chat = function (_React$Component) {
           _react2.default.createElement(
             'a',
             {
-              href: 'https://github.com/brandonmowat/react-chat-ui',
+              href: 'https://github.com/brandonmowat/react-file-showable-chat-ui',
               target: '_blank'
             },
             'Github'
@@ -141,7 +141,7 @@ var Chat = function (_React$Component) {
           _react2.default.createElement(
             'code',
             null,
-            'npm i -S react-chat-ui'
+            'npm i -S react-file-showable-chat-ui'
           )
         ),
         _react2.default.createElement(

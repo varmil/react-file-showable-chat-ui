@@ -1,5 +1,5 @@
 # 🙊 react-file-showable-chat-ui
-## The revised edition of original react-chat-ui.
+## The revised edition of original react-file-showable-chat-ui.
 
 A library of React components for building chat UI's.
 
