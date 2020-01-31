@@ -1,5 +1,5 @@
 # 🙊 react-file-showable-chat-ui
-## The revised edition of original react-file-showable-chat-ui.
+## The revised edition of original react-chat-ui.
 
 <img src="https://user-images.githubusercontent.com/6558862/73522961-21e44500-444d-11ea-984f-471e9055f064.png" width="50%">
 
