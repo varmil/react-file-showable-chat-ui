@@ -3,7 +3,8 @@ export default {
     overflow: 'auto'
   },
   chatbubble: {
-    backgroundColor: '#0084FF',
+    color: 'white',
+    backgroundColor: '#007aff',
     borderRadius: 20,
     marginTop: 1,
     marginRight: 'auto',
@@ -20,15 +21,27 @@ export default {
     float: 'right'
   },
   recipientChatbubble: {
-    backgroundColor: '#ccc'
+    backgroundColor: '#f4f4f8',
+    color: 'black'
   },
   recipientChatbubbleOrientationNormal: {
     float: 'left'
   },
   p: {
-    color: '#FFFFFF',
     fontSize: 16,
     fontWeight: 300,
     margin: 0
+  },
+  docs: {
+    display: 'flex',
+    color: 'black',
+    cursor: 'pointer',
+    backgroundColor: 'white',
+    padding: 16,
+    borderRadius: 4,
+    border: 'gray 1px solid',
+    wordWrap: 'break-word',
+    wordBreak: 'break-all',
+    whiteSpace: 'pre-wrap'
   }
 } as { [key: string]: React.CSSProperties }

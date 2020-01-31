@@ -57,10 +57,15 @@ class Chat extends React.Component {
             'https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript'
         }),
         new Message({
-          id: 222,
+          id: 444,
           senderName: 'Movie',
           message:
             'https://www.sample-videos.com/video123/mp4/480/big_buck_bunny_480p_1mb.mp4'
+        }),
+        new Message({
+          id: 555,
+          senderName: 'Docs',
+          message: 'http://www.africau.edu/images/default/sample.pdf'
         })
       ],
       useCustomBubble: false,
