@@ -1,17 +1,11 @@
-![react-chat-ui logo](https://i.imgur.com/YhPrFWw.png)
+![react-file-showable-chat-ui logo](https://i.imgur.com/YhPrFWw.png)
 
-# 🙊 react-chat-ui
+# 🙊 react-file-showable-chat-ui
 
 A library of React components for building chat UI's.
 
-[![NPM](https://nodei.co/npm/react-chat-ui.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-chat-ui/)
+[![NPM](https://nodei.co/npm/react-file-showable-chat-ui.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-file-showable-chat-ui/)
 
-## Sponsor
-
-Sponsored by [Pusher Chatkit](https://pusher.com/chatkit?utm_source=github&utm_campaign=react-chat-ui-sponsorship):
-
-<a href="https://pusher.com/chatkit?utm_source=github&utm_campaign=react-chat-ui-sponsorship">
-    <img width="650" src="https://raw.githubusercontent.com/bookercodes/react-chat-ui/master/media/chatit-banner.png" alt="Pusher Chatkit"></a>
 
 ## Features
 
@@ -23,12 +17,12 @@ Keep in mind that this project is still in the early stages of development. If y
 
 ## Installation
 
-`npm install react-chat-ui --save`
+`npm install react-file-showable-chat-ui --save`
 
 ## Basic Usage
 
 ```javascript
-import { ChatFeed, Message } from 'react-chat-ui'
+import { ChatFeed, Message } from 'react-file-showable-chat-ui'
 
 // Your code stuff...
 
@@ -90,22 +84,7 @@ this.state = {
 * [ChatBubble](./src/ChatBubble)
 * [BubbleGroup](./src/BubbleGroup)
 
-## Contributing!¡1 🔧
 
-Contributions are always welcomed and encouraged. If you don't want to write a feature request yourself, let ya boi know (either on [Twitter](http://twitter.com/brandonmowat) or by creating a Pull Request) and I'll get that shit coded right up.
-
-## Support
-
-If you'd like to support my development of `react-chat-ui`, you can donate via Litecoin or Etherium. But I also love when I get a shout-out on Twitter❤️
-
-* LTC: `LYExBx4bwSpAju6YpMXBLBCYVDvWV6n8fz`
-* ETH: `0xf9bf1a68732b1314f28050addd3ed13f2a187d9d`
-
-## TODO
-
-* documentation
-* documentation
-* documentation
 
 ## Development
 
