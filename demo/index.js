@@ -45,16 +45,22 @@ class Chat extends React.Component {
       messages: [
         new Message({ id: 'Mark', message: 'Hey guys!', senderName: 'Mark' }),
         new Message({
-          id: 2,
+          id: 333,
+          senderName: 'Elon Musk',
           message:
-            'Hey! Evan here. react-file-showable-chat-ui is pretty dooope.',
-          senderName: 'Evan'
+            'https://mandai-shop.jp/takasaki/wp-content/uploads/2018/03/sample.jpg'
         }),
         new Message({
           id: 333,
           senderName: 'Elon Musk',
           message:
-            'https://mandai-shop.jp/takasaki/wp-content/uploads/2018/03/sample.jpg'
+            'https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript'
+        }),
+        new Message({
+          id: 222,
+          senderName: 'Movie',
+          message:
+            'https://www.sample-videos.com/video123/mp4/480/big_buck_bunny_480p_1mb.mp4'
         })
       ],
       useCustomBubble: false,
@@ -94,7 +100,7 @@ class Chat extends React.Component {
         <h1 className="text-center">react-file-showable-chat-ui</h1>
         <p className="text-center">
           <a
-            href="https://github.com/brandonmowat/react-file-showable-chat-ui"
+            href="https://github.com/varmil/react-file-showable-chat-ui"
             target="_blank"
           >
             Github
@@ -106,7 +112,7 @@ class Chat extends React.Component {
         <div className="chatfeed-wrapper">
           <ChatFeed
             chatBubble={this.state.useCustomBubble && customBubble}
-            maxHeight={250}
+            maxHeight={666}
             messages={this.state.messages} // Boolean: list of message objects
             showSenderName
           />

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ChatBubbleProps from './interface'
+import ChatBubbleProps, { BubbleStyles } from './interface'
 import styles from './styles'
 
 const defaultBubbleStyles = {
@@ -23,26 +23,38 @@ const isMov = (ext: string) => ['mp4', 'avi', 'mov'].some(s => s === ext)
 
 export default class ChatBubble extends React.Component<ChatBubbleProps> {
   // create different UI according to the file extension
-  factoryMediaFileUI() {
+  factoryMediaFileUI(bubbleStyles: BubbleStyles) {
     const { message } = this.props
-    let { bubbleStyles } = this.props
-    bubbleStyles = bubbleStyles || defaultBubbleStyles
-    const { mediaFile } = bubbleStyles
+    const { mediaFile, text } = bubbleStyles
     const ext = message.message.split('.').pop()
 
-    // TODO:
     if (isImg(ext)) {
-      return <img src={message.message} />
+      return (
+        <div style={{ padding: 10, ...mediaFile }}>
+          <img style={{ width: '100%' }} src={message.message} />
+        </div>
+      )
     }
     if (isDoc(ext)) {
       return null
     }
     if (isMov(ext)) {
-      return null
+      return (
+        <div style={{ padding: 10, ...mediaFile }}>
+          <video controls style={{ width: '100%' }} src={message.message} />
+        </div>
+      )
     }
 
-    // default:
-    return <p style={{ ...mediaFile }}>{message.message}</p>
+    // default: use a tag
+    return (
+      <a
+        style={{ wordBreak: 'break-all', textDecoration: 'none' }}
+        href={message.message}
+      >
+        <p style={{ ...styles.p, ...text }}>{message.message}</p>
+      </a>
+    )
   }
 
   render() {
@@ -74,7 +86,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
       <div style={{ ...styles.chatbubbleWrapper }}>
         <div style={chatBubbleStyles}>
           {message.isMediaFile !== false && isValidUrl(message.message) ? (
-            this.factoryMediaFileUI()
+            this.factoryMediaFileUI(bubbleStyles)
           ) : (
             <p style={{ ...styles.p, ...text }}>{message.message}</p>
           )}
