@@ -8,8 +8,7 @@
     "build-demo": "npx babel --presets es2015,stage-0 ./demo/index.js -o ./demo/es5.js && npx browserify demo/es5.js -o demo/bundle.js",
     "compile": "./precompile.sh",
     "prepublish": "yarn compile",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gulp watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react",
@@ -19,8 +18,8 @@
     "ui",
     "messenger"
   ],
-  "author": "Brandon Mowat",
-  "license": "ISC",
+  "author": "Akihiro Yamamoto",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10"
   },

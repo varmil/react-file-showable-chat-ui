@@ -12,4 +12,5 @@ export interface BubbleStyles {
   userBubble: React.CSSProperties
   chatbubble: React.CSSProperties
   text: React.CSSProperties
+  mediaFile: React.CSSProperties
 }

@@ -5,19 +5,46 @@ import styles from './styles'
 const defaultBubbleStyles = {
   userBubble: {},
   chatbubble: {},
-  text: {}
+  text: {},
+  mediaFile: {}
 }
+const isImg = (ext: string) =>
+  ['jpg', 'jpeg', 'png', 'gif'].some(s => s === ext)
+const isDoc = (ext: string) => ['pdf', 'xlsx', 'csv'].some(s => s === ext)
+const isMov = (ext: string) => ['mp4', 'avi', 'mov'].some(s => s === ext)
 
 export default class ChatBubble extends React.Component<ChatBubbleProps> {
-  public render() {
-    const { bubblesCentered } = this.props
+  // create different UI according to the file extension
+  factoryMediaFileUI() {
+    const { message } = this.props
+    let { bubbleStyles } = this.props
+    bubbleStyles = bubbleStyles || defaultBubbleStyles
+    const { mediaFile } = bubbleStyles
+    const ext = message.message.split('.').pop()
+
+    if (isImg(ext)) {
+      return null
+    }
+    if (isDoc(ext)) {
+      return null
+    }
+    if (isMov(ext)) {
+      return null
+    }
+
+    // default:
+    return <p style={{ ...mediaFile }}>{message.message}</p>
+  }
+
+  render() {
+    const { bubblesCentered, message } = this.props
     let { bubbleStyles } = this.props
     bubbleStyles = bubbleStyles || defaultBubbleStyles
     const { userBubble, chatbubble, text } = bubbleStyles
 
     // message.id 0 is reserved for blue
     const chatBubbleStyles: React.CSSProperties =
-      this.props.message.id === 0
+      message.id === 0
         ? {
             ...styles.chatbubble,
             ...(bubblesCentered ? {} : styles.chatbubbleOrientationNormal),
@@ -37,7 +64,11 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
     return (
       <div style={{ ...styles.chatbubbleWrapper }}>
         <div style={chatBubbleStyles}>
-          <p style={{ ...styles.p, ...text }}>{this.props.message.message}</p>
+          {message.isMediaFile ? (
+            this.factoryMediaFileUI()
+          ) : (
+            <p style={{ ...styles.p, ...text }}>{message.message}</p>
+          )}
         </div>
       </div>
     )
