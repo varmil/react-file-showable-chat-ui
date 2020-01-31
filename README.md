@@ -89,5 +89,6 @@ this.state = {
 npm run watch
 
 # then terminal B
+# NOTE: you must disable cache in your browser
 npm run demo
 ```

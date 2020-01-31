@@ -32,7 +32,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
 
     // TODO:
     if (isImg(ext)) {
-      return null
+      return <img src={message.message} />
     }
     if (isDoc(ext)) {
       return null

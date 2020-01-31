@@ -10,7 +10,7 @@
     "compile": "./precompile.sh",
     "prepublish": "yarn compile",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watch \"npm run build-demo\" ./src"
+    "watch": "watch \"npm run compile && npm run build-demo\" ./src"
   },
   "keywords": [
     "react",
