@@ -1,6 +1,5 @@
-![react-file-showable-chat-ui logo](https://i.imgur.com/YhPrFWw.png)
-
 # 🙊 react-file-showable-chat-ui
+## The revised edition of original react-chat-ui.
 
 A library of React components for building chat UI's.
 
