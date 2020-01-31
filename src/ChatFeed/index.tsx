@@ -78,7 +78,7 @@ export default class ChatFeed extends React.Component<ChatFeedInterface> {
       messageNodes.push(
         <div key="isTyping" style={{ ...styles.chatbubbleWrapper }}>
           <ChatBubble
-            message={new Message({ id: 1, message: '...', senderName: '' })}
+            message={new Message({ id: -1, message: '...', senderName: '' })}
             bubbleStyles={bubbleStyles}
           />
         </div>

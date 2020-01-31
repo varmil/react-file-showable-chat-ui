@@ -28,11 +28,8 @@ import { ChatFeed, Message } from 'react-file-showable-chat-ui'
 render() {
 
   return (
-
-    // Your JSX...
-
     <ChatFeed
-      messages={this.state.messages} // Boolean: list of message objects
+      messages={this.state.messages} // list of message objects
       isTyping={this.state.is_typing} // Boolean: is the recipient typing
       hasInputField={false} // Boolean: use our input, or use your own
       showSenderName // show the name of the user who sent the message
