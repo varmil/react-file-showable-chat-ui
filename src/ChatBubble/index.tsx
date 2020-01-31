@@ -8,6 +8,14 @@ const defaultBubbleStyles = {
   text: {},
   mediaFile: {}
 }
+const isValidUrl = (string: string) => {
+  try {
+    new URL(string)
+    return true
+  } catch (_) {
+    return false
+  }
+}
 const isImg = (ext: string) =>
   ['jpg', 'jpeg', 'png', 'gif'].some(s => s === ext)
 const isDoc = (ext: string) => ['pdf', 'xlsx', 'csv'].some(s => s === ext)
@@ -22,6 +30,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
     const { mediaFile } = bubbleStyles
     const ext = message.message.split('.').pop()
 
+    // TODO:
     if (isImg(ext)) {
       return null
     }
@@ -64,7 +73,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
     return (
       <div style={{ ...styles.chatbubbleWrapper }}>
         <div style={chatBubbleStyles}>
-          {message.isMediaFile ? (
+          {message.isMediaFile !== false && isValidUrl(message.message) ? (
             this.factoryMediaFileUI()
           ) : (
             <p style={{ ...styles.p, ...text }}>{message.message}</p>

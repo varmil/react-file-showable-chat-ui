@@ -85,5 +85,9 @@ this.state = {
 ## Development
 
 ```sh
-npm run dev
+# terminal A
+npm run watch
+
+# then terminal B
+npm run demo
 ```
