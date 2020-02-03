@@ -9,8 +9,8 @@ export interface ChatBubbleAndGroupSharedProps {
 }
 
 export interface BubbleStyles {
-  userBubble: React.CSSProperties
-  chatbubble: React.CSSProperties
-  text: React.CSSProperties
-  mediaFile: React.CSSProperties
+  userBubble?: React.CSSProperties
+  chatbubble?: React.CSSProperties
+  text?: React.CSSProperties
+  mediaFile?: React.CSSProperties
 }
