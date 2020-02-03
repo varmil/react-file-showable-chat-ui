@@ -41,6 +41,8 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
         <a
           style={{ display: 'block', textDecoration: 'none' }}
           href={message.message}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <div style={{ ...styles.docs, ...mediaFile }}>
             <div style={{ marginRight: 5 }}>
@@ -73,6 +75,8 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
       <a
         style={{ wordBreak: 'break-all', textDecoration: 'none' }}
         href={message.message}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <p style={{ ...styles.p, ...text }}>{message.message}</p>
       </a>
