@@ -21,6 +21,17 @@ const isImg = (ext: string) =>
 const isDoc = (ext: string) => ['pdf', 'xlsx', 'csv'].some(s => s === ext)
 const isMov = (ext: string) => ['mp4', 'avi', 'mov'].some(s => s === ext)
 
+const nlToBr = (text: string) => {
+  return text.split('\n').map((item, key) => {
+    return (
+      <span key={key}>
+        {item}
+        <br />
+      </span>
+    )
+  })
+}
+
 export default class ChatBubble extends React.Component<ChatBubbleProps> {
   // create different UI according to the file extension
   factoryMediaFileUI(bubbleStyles: BubbleStyles) {
@@ -114,7 +125,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
           {message.isMediaFile !== false && isValidUrl(message.message) ? (
             this.factoryMediaFileUI(bubbleStyles)
           ) : (
-            <p style={{ ...styles.p, ...text }}>{message.message}</p>
+            <p style={{ ...styles.p, ...text }}>{nlToBr(message.message)}</p>
           )}
         </div>
       </div>

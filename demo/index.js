@@ -43,7 +43,11 @@ class Chat extends React.Component {
     super()
     this.state = {
       messages: [
-        new Message({ id: 'Mark', message: 'Hey guys!', senderName: 'Mark' }),
+        new Message({
+          id: 'Mark',
+          message: 'Hey guys!\n line break is ok!',
+          senderName: 'Mark'
+        }),
         new Message({
           id: 333,
           senderName: 'Elon Musk',
