@@ -20,9 +20,6 @@
     "ui",
     "messenger"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": "Akihiro Yamamoto",
   "license": "MIT",
   "dependencies": {
