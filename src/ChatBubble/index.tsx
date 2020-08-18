@@ -18,7 +18,7 @@ const isValidUrl = (string: string) => {
 }
 const isImg = (ext: string) =>
   ['jpg', 'jpeg', 'png', 'gif'].some(s => s === ext)
-const isDoc = (ext: string) => ['pdf', 'xlsx', 'csv'].some(s => s === ext)
+const isDoc = (ext: string) => ['pdf', 'xlsx', 'csv', 'zip'].some(s => s === ext)
 const isMov = (ext: string) => ['mp4', 'avi', 'mov'].some(s => s === ext)
 
 const nlToBr = (text: string) => {
