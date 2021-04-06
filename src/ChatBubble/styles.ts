@@ -1,6 +1,6 @@
 export default {
   chatbubbleWrapper: {
-    overflow: 'auto',
+    overflow: 'auto'
   },
   chatbubble: {
     color: 'white',
@@ -15,25 +15,25 @@ export default {
     paddingBottom: 8,
     paddingLeft: 14,
     paddingRight: 14,
-    width: '-webkit-fit-content',
+    width: '-webkit-fit-content'
   },
   chatbubbleOrientationNormal: {
-    float: 'right',
+    float: 'right'
   },
   recipientChatbubble: {
     backgroundColor: '#f4f4f8',
-    color: 'black',
+    color: 'black'
   },
   recipientChatbubbleOrientationNormal: {
-    float: 'left',
+    float: 'left'
   },
   p: {
     fontSize: 16,
     fontWeight: 300,
-    margin: 0,
+    margin: 0
   },
   atag: {
-    color: 'white',
+    color: 'white'
   },
   docs: {
     display: 'flex',
@@ -45,6 +45,6 @@ export default {
     border: 'gray 1px solid',
     wordWrap: 'break-word',
     wordBreak: 'break-all',
-    whiteSpace: 'pre-wrap',
-  },
-} as {[key: string]: React.CSSProperties}
+    whiteSpace: 'pre-wrap'
+  }
+} as { [key: string]: React.CSSProperties }
