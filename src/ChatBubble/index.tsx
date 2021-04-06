@@ -6,7 +6,7 @@ const defaultBubbleStyles = {
   userBubble: {},
   chatbubble: {},
   text: {},
-  mediaFile: {},
+  mediaFile: {}
 }
 const isValidUrl = (string: string) => {
   try {
@@ -116,7 +116,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
             ...styles.chatbubble,
             ...(bubblesCentered ? {} : styles.chatbubbleOrientationNormal),
             ...chatbubble,
-            ...userBubble,
+            ...userBubble
           }
         : {
             ...styles.chatbubble,
@@ -125,7 +125,7 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
               ? {}
               : styles.recipientChatbubbleOrientationNormal),
             ...chatbubble,
-            ...userBubble,
+            ...userBubble
           }
 
     return (
