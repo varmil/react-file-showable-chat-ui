@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ChatBubbleProps, {BubbleStyles} from './interface'
+import ChatBubbleProps, { BubbleStyles } from './interface'
 import styles from './styles'
 
 const defaultBubbleStyles = {
@@ -42,28 +42,28 @@ const newLineToBr = (text: string) => {
 export default class ChatBubble extends React.Component<ChatBubbleProps> {
   // create different UI according to the file extension
   factoryMediaFileUI(bubbleStyles: BubbleStyles) {
-    const {message} = this.props
+    const { message } = this.props
     const url = message.message
-    const {mediaFile, text} = bubbleStyles
+    const { mediaFile, text } = bubbleStyles
     const ext = url.split('.').pop()
 
     if (isImg(ext)) {
       return (
-        <div style={{padding: 10, ...mediaFile}}>
-          <img style={{width: '100%'}} src={url} />
+        <div style={{ padding: 10, ...mediaFile }}>
+          <img style={{ width: '100%' }} src={url} />
         </div>
       )
     }
     if (isDoc(ext)) {
       return (
         <a
-          style={{display: 'block', textDecoration: 'none'}}
+          style={{ display: 'block', textDecoration: 'none' }}
           href={message.message}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div style={{...styles.docs, ...mediaFile}}>
-            <div style={{marginRight: 5}}>
+          <div style={{ ...styles.docs, ...mediaFile }}>
+            <div style={{ marginRight: 5 }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -82,8 +82,8 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
     }
     if (isMov(ext)) {
       return (
-        <div style={{padding: 10, ...mediaFile}}>
-          <video controls style={{width: '100%'}} src={url} />
+        <div style={{ padding: 10, ...mediaFile }}>
+          <video controls style={{ width: '100%' }} src={url} />
         </div>
       )
     }
@@ -91,21 +91,23 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
     // default: use a tag
     return (
       <a
-        style={{wordBreak: 'break-all', textDecoration: 'none'}}
+        style={{ wordBreak: 'break-all', textDecoration: 'none' }}
         href={message.message}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <p style={{...styles.p, ...styles.atag, ...text}}>{message.message}</p>
+        <p style={{ ...styles.p, ...styles.atag, ...text }}>
+          {message.message}
+        </p>
       </a>
     )
   }
 
   render() {
-    const {bubblesCentered, message} = this.props
-    let {bubbleStyles} = this.props
+    const { bubblesCentered, message } = this.props
+    let { bubbleStyles } = this.props
     bubbleStyles = bubbleStyles || defaultBubbleStyles
-    const {userBubble, chatbubble, text} = bubbleStyles
+    const { userBubble, chatbubble, text } = bubbleStyles
 
     // message.id 0 is reserved for blue
     const chatBubbleStyles: React.CSSProperties =
@@ -127,12 +129,14 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
           }
 
     return (
-      <div style={{...styles.chatbubbleWrapper}}>
+      <div style={{ ...styles.chatbubbleWrapper }}>
         <div style={chatBubbleStyles}>
           {message.isMediaFile && isValidUrl(message.message) ? (
             this.factoryMediaFileUI(bubbleStyles)
           ) : (
-            <p style={{...styles.p, ...text}}>{newLineToBr(message.message)}</p>
+            <p style={{ ...styles.p, ...text }}>
+              {newLineToBr(message.message)}
+            </p>
           )}
         </div>
       </div>
@@ -140,4 +144,4 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
   }
 }
 
-export {ChatBubbleProps}
+export { ChatBubbleProps }
