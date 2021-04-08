@@ -1,7 +1,7 @@
 import * as React from 'react'
+import Linkify from 'react-linkify'
 import ChatBubbleProps, { BubbleStyles } from './interface'
 import styles from './styles'
-import Linkify from 'react-linkify'
 
 const defaultBubbleStyles = {
   userBubble: {},
@@ -23,11 +23,29 @@ const isDoc = (ext: string) =>
   ['pdf', 'xlsx', 'csv', 'zip'].some((s) => s === ext)
 const isMov = (ext: string) => ['mp4', 'avi', 'mov'].some((s) => s === ext)
 
+const LinkifyWrapper = ({ children }) => (
+  <Linkify
+    componentDecorator={(decoratedHref, decoratedText, key) => (
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ wordBreak: 'break-all', textDecoration: 'none' }}
+        href={decoratedHref}
+        key={key}
+      >
+        {decoratedText}
+      </a>
+    )}
+  >
+    {children}
+  </Linkify>
+)
+
 const nlToBr = (text: string) => {
   return text.split('\n').map((item, key) => {
     return (
       <span key={key}>
-        <Linkify>{item}</Linkify>
+        <LinkifyWrapper>{item}</LinkifyWrapper>
         <br />
       </span>
     )
@@ -83,24 +101,10 @@ export default class ChatBubble extends React.Component<ChatBubbleProps> {
       )
     }
 
-    // default: use a tag with react-linkify
+    // default: react-linkify
     return (
       <p style={{ ...styles.p, ...text }}>
-        <Linkify
-          componentDecorator={(decoratedHref, decoratedText, key) => (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ wordBreak: 'break-all', textDecoration: 'none' }}
-              href={decoratedHref}
-              key={key}
-            >
-              {decoratedText}
-            </a>
-          )}
-        >
-          {message.message}
-        </Linkify>
+        <LinkifyWrapper>{message.message}</LinkifyWrapper>
       </p>
     )
   }
