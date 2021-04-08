@@ -1,6 +1,6 @@
 {
   "name": "react-file-showable-chat-ui",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "A library of React components for building chat UI's",
   "repository": "https://github.com/varmil/react-file-showable-chat-ui",
   "main": "./lib/index.js",
@@ -39,6 +39,7 @@
     "browserify": "^16.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-linkify": "^1.0.0-alpha",
     "typescript": "^3.7.5",
     "watch": "^1.0.2"
   }
